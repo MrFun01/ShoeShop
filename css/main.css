@@ -1,39 +1,44 @@
 body {
   margin: 0;
   padding: 0;
-  background: #0d1c33; }
+  background: #0d1c33;
+ }
+
+ a, a:hover {
+   text-decoration: none;
+ }
 
 @font-face {
   font-family: "NeueMachina_Regular";
   src: url("../fonts/NeueMachina/NeueMachina-Light.ttf") format("truetype"); }
 .navbar_section {
-  position: fixed;
   z-index: 100;
   width: 100%;
-  background: rgba(0, 0, 0, 0);
-  margin: 36px 14px; }
+  /* background: #0d1c33; */
+  background: transparent;
+  padding: 36px 14px; }
   .navbar_section.navbar-active {
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3); }
   .navbar_section .navbar .navbar-nav {
     padding-left: 11px;
     text-transform: uppercase; }
-    .navbar_section .navbar .navbar-nav .nav-item .languages {
+    .navbar_section .navbar .navbar-nav .languages {
       color: #fff;
       font-size: 22px;
       font-weight: 700;
       line-height: 21px;
       letter-spacing: 0.04em;
       font-family: NeueMachina_Regular,sans-serif;
-      transition: .4s linear; }
-      .navbar_section .navbar .navbar-nav .nav-item .languages:hover {
+      transition: .3s linear; }
+      .navbar_section .navbar .navbar-nav .languages:hover {
         color: rgba(255, 255, 255, 0.3); }
-    .navbar_section .navbar .navbar-nav .nav-item .call_number {
-      margin-left: 474px;
+    .navbar_section .navbar .navbar-nav  .call_number {
       color: #fff;
       font-size: 22px;
       font-weight: 400;
       line-height: 21px;
       letter-spacing: 0.04em;
-      font-family: NeueMachina_Regular,sans-serif; }
+      font-family: NeueMachina_Regular,sans-serif;
+    margin-right: 55px; }
 
 /*# sourceMappingURL=main.css.map */
