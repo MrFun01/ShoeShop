@@ -11,6 +11,9 @@ body {
 @font-face {
   font-family: "NeueMachina_Regular";
   src: url("../fonts/NeueMachina/NeueMachina-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: "HelveticaNeueCyr-Light";
+  src: url("../fonts/helveticaneuecyrmedium/HelveticaNeueCyr-Light.otf") format("truetype"); }
 .navbar_section {
   z-index: 100;
   width: 100%;
@@ -29,9 +32,11 @@ body {
       line-height: 21px;
       letter-spacing: 0.04em;
       font-family: NeueMachina_Regular,sans-serif;
-      transition: .3s linear; }
+      transition: .2s linear; }
       .navbar_section .navbar .navbar-nav .languages:hover {
-        color: rgba(255, 255, 255, 0.3); }
+        color: #ffffffb4; }
+      .navbar_section .navbar .navbar-nav .languages.selected:hover {
+        color: #ffffff; }
     .navbar_section .navbar .navbar-nav  .call_number {
       color: #fff;
       font-size: 22px;
@@ -39,6 +44,14 @@ body {
       line-height: 21px;
       letter-spacing: 0.04em;
       font-family: NeueMachina_Regular,sans-serif;
-    margin-right: 55px; }
+    margin-right: 55px;
+     }
+     .aboutVR-text h1 {
+      font-family: NeueMachina_Regular,sans-serif;
+     }
+
+     .aboutVR-text p {
+      font-family: "HelveticaNeueCyr-Light";
+     }
 
 /*# sourceMappingURL=main.css.map */

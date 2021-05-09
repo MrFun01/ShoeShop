@@ -6,78 +6,47 @@ $(document).ready(function () {
     });
 });
 
-// $('.slider-main').css('height', `${$(window).height() - $('.navbar_section').outerHeight()}px`)
 
+// Asilbek's JS start
 
-class SLIDER2 {
-    constructor(options) {
-        this.slider = document.querySelector(options.slider);
-        this.sliderLine = this.slider.querySelector('.sliders');
-        this.slides = this.sliderLine.children;
+$('.slider-main .languages').each(function () {
+    $(this).on('click', () => {
+        $('.slider-main .languages').removeClass('selected')
 
-        this.prev = document.querySelector('.slider__prev2');
-        this.next = document.querySelector('.slider__next2');
-
-        this.activeSlide = 0;
-        this.moveUnit = 100;
-
-        for (let i = 0; i < this.slides.length; i++) {
-            const currentSlide = this.slides[i];
-
-            if (i != this.activeSlide) {
-                currentSlide.style.transform = `translateY(${this.moveUnit}%)`;
+        $(this).addClass('selected');
+        let langType = $(this).attr('data-language');
+        
+        $('.slider-main .languages').each(function () {
+            if ($(this).attr('data-language') == langType) {
+                $(this).addClass('selected');
+            } else {
+                $(this).removeClass('selected');
             }
+        })
+    })
+})
 
-            if (i === this.slides.length - 1) {
-                currentSlide.style.transform = `translateY(-${this.moveUnit}%)`;
-            }
-
-        }
-
-        this.prev.addEventListener('click', () => this.move(this.prev));
-        this.next.addEventListener('click', () => this.move(this.next));
-    }
-
-    move(btn) {
-        let LeftOrRightBTN = btn == this.next ? this.moveUnit * -1 : this.moveUnit;
-
-        for (let i = 0; i < this.slides.length; i++) {
-            let currentSlide = this.slides[i];
-            currentSlide.style.transition = '0ms';
-            if (currentSlide != this.activeSlide) {
-                currentSlide.style.transform = `translateY(${LeftOrRightBTN * -1}%)`
-            }
-        }
+// Asilbek's JS end
 
 
-        this.slides[this.activeSlide].style = `transform: translateY(${LeftOrRightBTN}%)`
-        this.slides[this.activeSlide].style.transition = '500ms'
+$('.aboutVR-img').on('mousemove', (e) => {
 
+    let xAxis = ($(window).innerWidth() / 2 - e.pageX) / 30;
+    let yAxis = ($(window).innerHeight() / 2 - e.pageY) / 30;
 
-        if (btn == this.next) {
-            this.activeSlide++;
-            if (this.activeSlide > this.slides.length - 1) {
-                this.activeSlide = 0;
-            }
-        } else if (btn == this.prev) {
-            this.activeSlide--;
-            if (this.activeSlide < 0) {
-                this.activeSlide = this.slides.length - 1;
-            }
-        }
+    $('.aboutVR-img img').css('transform', `rotateY(${xAxis}deg) rotateX(${yAxis}deg) translateZ(40px)`);
+    $('.aboutVR-img img').css('transition', `0.1s`);
 
-        this.slides[this.activeSlide].style.transform = `translateY(${0})`
-        this.slides[this.activeSlide].style.transition = '500ms'
-
-    }
-}
-
-const sliderNum2 = new SLIDER2({
-    slider: '.slider-main',
 })
 
 
 
+// Animate Out
+$('.aboutVR-img').on('mouseleave', e => {
+    $('.aboutVR-img img').css('transform', `rotateY(0deg) rotateX(0deg) translateZ(0px)`);
+    $('.aboutVR-img img').css('transition', `0.3s`);
+
+})
 
 
 
