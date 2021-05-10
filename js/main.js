@@ -15,7 +15,6 @@ $('.slider-main .languages').each(function () {
 
         $(this).addClass('selected');
         let langType = $(this).attr('data-language');
-        
         $('.slider-main .languages').each(function () {
             if ($(this).attr('data-language') == langType) {
                 $(this).addClass('selected');
@@ -26,9 +25,26 @@ $('.slider-main .languages').each(function () {
     })
 })
 
-// Asilbek's JS end
+
+$('.burger-menu').each(function () {
+    $(this).on('click', () => {
+        $(this).closest('.slider-content').find('.menu__modal').removeClass('hidden');
+        $('.slick-dots').addClass('hidden')
+    })
+
+    $('.menu__modal .close').each(function () {
+        $(this).on('click', () => {
+            $(this).closest('.menu__modal').addClass('hidden');
+            $('.slick-dots').removeClass('hidden')
+        })
+    })
+})
 
 
+
+
+
+// Animate In
 $('.aboutVR-img').on('mousemove', (e) => {
 
     let xAxis = ($(window).innerWidth() / 2 - e.pageX) / 30;
@@ -49,4 +65,5 @@ $('.aboutVR-img').on('mouseleave', e => {
 })
 
 
+// Asilbek's JS end
 

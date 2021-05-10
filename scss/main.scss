@@ -1,57 +1,168 @@
 body{
   margin: 0;
   padding: 0;
-  background: rgba(13,28,51,1);
+  background: #12122f;
 
 }
 $textWhite:#fff;
-
+a, a:hover {
+  text-decoration: none;
+}
+@font-face {
+  font-family: "NeueMachina_Bold";
+  src: url("../fonts/NeueMachina/NeueMachina-Bold.ttf") format('truetype');
+}
 @font-face {
   font-family: "NeueMachina_Regular";
   src: url("../fonts/NeueMachina/NeueMachina-Light.ttf") format('truetype');
 }
+@font-face {
+  font-family: "NeueMachina_Medium";
+  src: url("../fonts/NeueMachina/NeueMachina-Medium.ttf") format('truetype');
+}
+@font-face {
+  font-family: "HelveticaNeueCyr_Medium";
+  src: url("../fonts/helveticaneuecyrmedium/HelveticaNeueCyr-Medium.otf") format('truetype');
+}
+@font-face {
+  font-family: "HelveticaNeueCyr_Light";
+  src: url("../fonts/helveticaneuecyrmedium/HelveticaNeueCyr-Light.otf") format('truetype');
+}
+@font-face {
+  font-family: "HelveticaNeueCyr_Roman";
+  src: url("../fonts/helveticaneuecyrmedium/HelveticaNeueCyr-Roman.otf") format('truetype');
+}
 
-.navbar_section {
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  background: rgba(0,0,0,0);
-  margin: 36px 14px;
+.slider-main{
 
-  &.navbar-active {
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
-  }
+    text-transform: uppercase;
+    .navbar_section {
 
-  .navbar {
-    .navbar-nav{
-      padding-left: 11px;
-      text-transform: uppercase;
-      .nav-item {
+      z-index: 100;
+      width: 100%;
+      //background: rgba(0,0,0,0);
+      background: transparent;
+      margin: 36px 14px;
 
-        .languages{
-          color: #fff;
-          font-size: 22px;
-          font-weight: 700;
-          line-height: 21px;
-          letter-spacing: 0.04em;
-          font-family: NeueMachina_Regular,sans-serif;
-          transition: .4s linear;
+      &.navbar-active {
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+      }
 
-          &:hover{
-            color: rgba(255, 255, 255, 0.3);
+      .navbar {
+        .navbar-nav{
+          padding-left: 11px;
+          .nav-item__lang {
+            .languages{
+              color: #fff;
+              font-size: 22px;
+              font-weight: 700;
+              line-height: 21px;
+              letter-spacing: 0.04em;
+              font-family: NeueMachina_Regular,sans-serif;
+              transition: .2s linear;
+
+              &:hover{
+                color:  #ffffffb4;
+              }
+              .selected{
+                &:hover{
+                  color: #ffffff;
+                }
+              }
+
+            }
+
+
+
           }
+          .nav-item__about{
+            .call_number{
+              margin-right: 55px;
+              text-decoration: none;
+              color: #fff;
+              font-size: 22px;
+              font-weight: 400;
+              line-height: 21px;
+              letter-spacing: 3px;
+              font-family: NeueMachina_Regular,sans-serif;
+            }
+            .consultation{
+              font-family: HelveticaNeueCyr_Light,sans-serif;
+              letter-spacing: 3px;
+            }
 
+          }
         }
-        .call_number{
-          margin-left: 474px;
-          color: #fff;
-          font-size: 22px;
+      }
+
+    }
+    .comment_about_vr{
+      margin-top: 17%;
+      padding: 0 11%;
+      display: flex;
+      color: #fff;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 3px;
+      font-family: HelveticaNeueCyr_Medium,sans-serif;
+      align-items: center;
+      .slesh_element{
+        font-size: 22px;
+        line-height: 21px;
+        color: #1E4FC6;
+        padding: 0 16px 0 48px;
+
+      }
+
+    }
+    .aboutVR-text h1 {
+
+      font-family: NeueMachina_Regular,sans-serif;
+    }
+
+    .aboutVR-text p {
+      font-family: HelveticaNeueCyr-Light,sans-serif;
+    }
+
+  .slide-2{
+    color:#fff;
+    .wrapper_headline_slide_two{
+      margin-top: 5%;
+      padding: 0 8%;
+
+      .header_text_slide_two{
+        vertical-align: top;
+          font-size: 52px;
           font-weight: 400;
-          line-height: 21px;
-          letter-spacing: 0.04em;
-          font-family: NeueMachina_Regular,sans-serif;
-        }
+          line-height: 57px;
+          font-family: NeueMachina_Medium,sans-serif;
 
+      }
+    }
+    .main_content_wrapper_slideTwo{
+
+      .content_img_part_wrap{
+        text-transform: initial;
+        padding: 20px 10% 0 22%;
+        .first_img{
+          height: 297px;
+        }
+        .h_text_content{
+          font-size: 28px;
+          font-weight: 700;
+          font-family: NeueMachina_Bold,sans-serif;
+          line-height: 36px;
+          .info_text_content{
+            margin-top: 10px;
+            letter-spacing: 1px;
+            word-spacing: 6px;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 23px;
+            font-family: HelveticaNeueCyr_Roman,sans-serif;
+            opacity: .8;
+          }
+        }
       }
     }
   }

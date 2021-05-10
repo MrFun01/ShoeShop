@@ -1,8 +1,18 @@
+@font-face {
+    font-family: "HelveticaNeueCyr_Medium";
+    src: url("../fonts/helveticaneuecyrmedium/HelveticaNeueCyr-Medium.otf") format('truetype');
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: url('../images/burger-icon.png');
+}
+
 .navbar-nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 30px;
 }
 
 .nav-item__lang {
@@ -44,12 +54,18 @@
     opacity: 0.4;
 }
 
-.slide-1 {
+.slide-1, .slide-2 {
     background: url('../images/slider-1/slider1-bg.jpg') no-repeat center / cover;
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-direction: column !important;
+}
+
+.slide-2 {
+    background: url('../images/slider-2/slider2-bg.jpg') no-repeat center / cover;
 }
 
 .aboutVR {
-    margin-top: 20px;
     padding: 0 105px;
     display: flex;
     justify-content: space-evenly;
@@ -78,8 +94,7 @@
     line-height: 24px;
 }
 
-.aboutVR-img,
-.aboutVR-img img {
+.aboutVR-img, .aboutVR-img img {
     transition: 0.3s;
 }
 
@@ -94,8 +109,77 @@
     height: 304px;
 }
 
+.menu__modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    transition: .3s;
 
-/* 
-.aboutVR-img:hover img {
-    transform: translateZ(100px);
-} */
+
+    background: url('../images/burger-menu__img/menu-bg.jpg') no-repeat center / cover;
+}
+
+.menu__modal-nav {
+    padding: 30px 40px;;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.menu__modal-about li {
+    list-style: none;
+    width: max-content;
+}
+
+.menu__modal-about {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left {
+    margin-right: 70px;
+}
+
+.right {
+    margin-left: 70px;
+}
+
+.left li:not(:last-of-type),
+.right li:not(:last-of-type) {
+    margin-bottom: 25px;
+}
+
+.menu__modal-about div li a {
+    font-size: 40px;
+    color: #fff;
+    opacity: .4;
+    text-transform: none;
+    transition: .3s;
+}
+
+.menu__modal-about div li a:hover {
+    opacity: 1;
+}
+
+.menu__modal-about div li a sup {
+    font-size: 18px;
+    line-height: 130%;
+    
+}
+
+.hidden {
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
