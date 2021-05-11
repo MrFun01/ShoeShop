@@ -67,3 +67,7 @@ $('.aboutVR-img').on('mouseleave', e => {
 
 // Asilbek's JS end
 
+
+
+
+console.log($(window).innerWidth(), $(window).innerHeight());

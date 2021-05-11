@@ -54,7 +54,7 @@
     opacity: 0.4;
 }
 
-.slide-1, .slide-2 {
+.slide-1, .slide-2, .slide-3 {
     background: url('../images/slider-1/slider1-bg.jpg') no-repeat center / cover;
     display: flex !important;
     justify-content: space-between !important;
@@ -63,6 +63,10 @@
 
 .slide-2 {
     background: url('../images/slider-2/slider2-bg.jpg') no-repeat center / cover;
+}
+
+.slide-3 {
+    background: #000032 !important;
 }
 
 .aboutVR {
@@ -182,4 +186,30 @@
     visibility: hidden;
     width: 0;
     height: 0;
+}
+
+
+.card {
+    background: #000032;
+    border: 1px solid rgba(255, 255, 255, 0.247);
+    border-radius: 7px;
+    overflow: hidden;
+    width: 32%;
+    height: auto;
+
+    
+}
+
+.card__img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}   
+
+.card:last-of-type .card__img {
+    margin-bottom: 0;
+    width: 78%;
+    height: auto;
 }
