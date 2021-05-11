@@ -1,10 +1,49 @@
 body{
-  margin: 0;
-  padding: 0;
-  background: #12122f;
+   margin: 0;
+   padding: 0;
+   background: #12122f;
 
-}
+ }
 $textWhite:#fff;
+
+%h-text{
+  text-transform: uppercase;
+  vertical-align: top;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 1px;
+  font-family: NeueMachina_Medium,sans-serif;
+}
+%more-part{
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: HelveticaNeueCyr_Roman, sans-serif;
+  letter-spacing: 1.5px;
+  transition: .3s linear;
+  &:hover{
+    cursor: pointer;
+    img{
+      transform: translateX(5px);
+
+    }
+
+  }
+  img{
+    transition: .3s linear;
+    margin-left: 5%;
+  }
+}
+%part-text-img{
+  position: absolute;
+  bottom: 8%;
+  left: 21%;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 130%;
+  font-family:NeueMachina_Regular,sans-serif ;
+}
 a, a:hover {
   text-decoration: none;
 }
@@ -24,6 +63,8 @@ a, a:hover {
   font-family: "HelveticaNeueCyr_Medium";
   src: url("../fonts/helveticaneuecyrmedium/HelveticaNeueCyr-Medium.otf") format('truetype');
 }
+
+
 @font-face {
   font-family: "HelveticaNeueCyr_Light";
   src: url("../fonts/helveticaneuecyrmedium/HelveticaNeueCyr-Light.otf") format('truetype');
@@ -33,16 +74,14 @@ a, a:hover {
   src: url("../fonts/helveticaneuecyrmedium/HelveticaNeueCyr-Roman.otf") format('truetype');
 }
 
+
 .slider-main{
+  color: $textWhite;
 
-    text-transform: uppercase;
     .navbar_section {
-
-      z-index: 100;
+      z-index: 1;
       width: 100%;
-      //background: rgba(0,0,0,0);
       background: transparent;
-      margin: 36px 14px;
 
       &.navbar-active {
         box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
@@ -83,7 +122,7 @@ a, a:hover {
               font-size: 22px;
               font-weight: 400;
               line-height: 21px;
-              letter-spacing: 3px;
+              letter-spacing: 2.5px;
               font-family: NeueMachina_Regular,sans-serif;
             }
             .consultation{
@@ -97,15 +136,15 @@ a, a:hover {
 
     }
     .comment_about_vr{
-      margin-top: 17%;
-      padding: 0 11%;
       display: flex;
       color: #fff;
       font-size: 14px;
       line-height: 14px;
       letter-spacing: 3px;
-      font-family: HelveticaNeueCyr_Medium,sans-serif;
+      font-family: HelveticaNeueCyr_Medium, sans-serif;
       align-items: center;
+      margin-left: 7.8%;
+      margin-bottom: 50px;
       .slesh_element{
         font-size: 22px;
         line-height: 21px;
@@ -127,43 +166,125 @@ a, a:hover {
   .slide-2{
     color:#fff;
     .wrapper_headline_slide_two{
-      margin-top: 5%;
-      padding: 0 8%;
+      margin: 0 7%;
 
       .header_text_slide_two{
         vertical-align: top;
-          font-size: 52px;
+          font-size: 49px;
           font-weight: 400;
-          line-height: 57px;
+          line-height: 110%;
           font-family: NeueMachina_Medium,sans-serif;
 
       }
     }
-    .main_content_wrapper_slideTwo{
+    .main_content_wrapper{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-bottom: 10%;
+      .main_content_wrapper_slideTwo{
 
-      .content_img_part_wrap{
-        text-transform: initial;
-        padding: 20px 10% 0 22%;
-        .first_img{
-          height: 297px;
-        }
-        .h_text_content{
-          font-size: 28px;
-          font-weight: 700;
-          font-family: NeueMachina_Bold,sans-serif;
-          line-height: 36px;
-          .info_text_content{
-            margin-top: 10px;
-            letter-spacing: 1px;
-            word-spacing: 6px;
-            font-size: 17px;
-            font-weight: 300;
-            line-height: 23px;
-            font-family: HelveticaNeueCyr_Roman,sans-serif;
-            opacity: .8;
+        .content_img_part_wrap{
+          text-transform: initial;
+
+          .first_img{
+            width: 260px;
+            height: 240px;
+            margin: 25px 0;
+            img{
+              transition: .3s;
+              &:hover{
+                transform: translateY(-15px);
+              }
+            }
+          }
+          .h_text_content{
+            font-size: 25px;
+            font-weight: 700;
+            font-family: NeueMachina_Bold,sans-serif;
+            line-height: 36px;
+            .info_text_content{
+              margin-top: 10px;
+              letter-spacing: 1px;
+              word-spacing: 6px;
+              font-size: 14px;
+              font-weight: 300;
+              line-height: 23px;
+              font-family: HelveticaNeueCyr_Roman,sans-serif;
+              opacity: .8;
+            }
           }
         }
       }
     }
   }
+  .menu__modal-about li a {
+    font-family: NeueMachina_Regular, sans-serif;
+  }
+  .slide-3{
+    background: url(../images/slider-2/slider2-bg.jpg) no-repeat center / cover;
+    .wrapper_headline_slide_third{
+      margin: 3% 7%;
+      display: flex;
+      justify-content: space-evenly;
+      .left_part_header{
+        .header_text_slide_third{
+          @extend %h-text;
+        }
+        .wrap_img_part{
+          margin: 10% 5%  0 0;
+          position: relative;
+          .card{
+            display: flex;
+            justify-content: flex-end;
+            border: none;
+            margin-left: 3%;
+            .border_img{
+              border-radius: 3%;
+              width: 106%;
+              height: 107%;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              position: absolute;
+              z-index: 100;
+              top: -4%;
+              left: -3%;
+            }
+            .text_img{
+              @extend %part-text-img;
+              .more_part{
+                @extend %more-part;
+              }
+            }
+            .text_img_two{
+              @extend %part-text-img;
+              left: 13%;
+              .more_part{
+                @extend %more-part;
+
+              }
+            }
+          }
+        }
+      }
+      .left_part_header{
+        .info_text_slide_third{
+          text-transform: initial;
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 300;
+          font-family: HelveticaNeueCyr_Light,sans-serif;
+          margin-top: 14%;
+          opacity: .8;
+          letter-spacing: 1px;
+          word-spacing: .5px;
+          .first_word{
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+  }
+
 }
