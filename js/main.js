@@ -62,12 +62,34 @@ $('.aboutVR-img').on('mouseleave', e => {
     $('.aboutVR-img img').css('transform', `rotateY(0deg) rotateX(0deg) translateZ(0px)`);
     $('.aboutVR-img img').css('transition', `0.3s`);
 
-})
+});
 
 
 // Asilbek's JS end
 
+// Open modal
+$(function () {
 
+    $('.md-trigger').on('click', function() {
+        $('.md-modal').addClass('md-show');
+    });
+
+    $('.md-close').on('click', function() {
+        $('.md-modal').removeClass('md-show');
+    });
+
+});
+// End modal
+
+
+// Input animation
+
+$('.brise-upload > label').find('input').change(function() {
+    var file = this.files;
+    $('.brise-upload > label').text('Selected file: ' + file[0].name);
+});
+
+// End input animation
 
 
 console.log($(window).innerWidth(), $(window).innerHeight());
